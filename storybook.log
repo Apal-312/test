@@ -1,5 +1,0 @@
-npm WARN deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported
-npm ERR! code EIDLETIMEOUT
-npm ERR! Idle timeout reached for host `registry.npmjs.org:443`
-
-npm ERR! A complete log of this run can be found in: /Users/macbook/.npm/_logs/2024-08-21T07_37_13_284Z-debug-0.log
