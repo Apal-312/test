@@ -1,32 +1,20 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import routesConfig from "@routes/routesConfig";
-import { REPO_NAME } from "@constants/repo";
+import { Routes, Route } from "react-router-dom";
 import Header from "@components/Header";
+import routesConfig from "@routes/routesConfig";
 
 import styles from "./App.module.css";
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter basename={`/${REPO_NAME}`}>
-        <Header />
-
-        <h1>Hello</h1>
-
-        <div className={styles.wrapper}>
-          <Routes>
-            {routesConfig.map((route, index) => (
-              <Route key={index} path={route.path} element={route.element} />
-            ))}
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </>
+    <div className={styles.wrapper}>
+      <Header />
+      <Routes>
+        {routesConfig.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
+      </Routes>
+    </div>
   );
 };
 
 export default App;
-
-// cn(ClassName)
-// ? {}  - можно писать  несколько функций
-// exact - нужен чтобы переходил при таком /1 url
